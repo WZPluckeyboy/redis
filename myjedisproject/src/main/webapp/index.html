@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $.get("findProvice",{},function (data) {
+                var pro=$("#pro");
+                $(data).each(function () {
+                    var op="<option name='"+this.id+"'>"+this.name+"</option>";
+                    pro.append(op);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<select id="pro">
+    <option>----请选择省份-----</option>
+
+</select>
+
+</body>
+</html>
